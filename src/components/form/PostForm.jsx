@@ -6,14 +6,12 @@ const PostForm = () => {
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
-  const [subtitle, setSubtitle] = useState('');
-  const [author, setAuthor] = useState('');
   const [content, setContent] = useState('');
 
   const handleSubmit = event => {
     event.preventDefault();
 
-    dispatch(createPost({ title, author, subtitle, content }));
+    dispatch(createPost({ title, content }));
   };
 
   return (
