@@ -1,6 +1,6 @@
 import React from 'react';
 import { getPosts } from '../../selectors/postSelector';
-import { useSelector } from '../../state/PostProvider';
+import { useSelector } from 'react-redux';
 import { Post } from './Post';
 
 const PostList = () => {
