@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from '';
+import { useDispatch } from '../../state/PostProvider';
 import { createPost } from '../../actions/postActions';
 
 const PostForm = () => {
