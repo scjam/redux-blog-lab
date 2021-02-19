@@ -20,6 +20,9 @@ export const Post = ({ title, content }) => {
         <dd>{content}</dd>
       </dl>
       <button onClick={handleClick}>Delete</button>
+    
+    
+    
     </>
   );
 };

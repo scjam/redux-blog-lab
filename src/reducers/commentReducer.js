@@ -4,7 +4,7 @@ const initialState = {
   comments: []
 };
 
-const reducer = (state = initialState, action) => {
+export default function reducer(state = initialState, action) {
   switch(action.type) {
     case SET_COMMENT:
       return {
@@ -12,18 +12,12 @@ const reducer = (state = initialState, action) => {
         comments: [...state.comments, action.payload]
       };
     case DELETE_COMMENT: {
-      const comments = state
-        .comments
-        .filter(comment => comment.body !== action.payload);
-
       return {
         ...state,
-        comments
+        comments: [...state.comments, action.payload]
       };
     }
     default:
       return state;
   }
-};
-
-export default reducer;
+}
