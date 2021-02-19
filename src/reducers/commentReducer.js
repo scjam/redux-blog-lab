@@ -13,7 +13,8 @@ const reducer = (state = initialState, action) => {
       };
     case DELETE_COMMENT: {
       const comments = state
-        .comments.filter(comment => comment.index !== action.payload);
+        .comments
+        .filter(comment => comment.body !== action.payload);
 
       return {
         ...state,
