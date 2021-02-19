@@ -7,7 +7,7 @@ const CommentList = () => {
   const comments = useSelector(getComments);
 
   const commentElements = comments.map(comment => (
-    <li key={comment.title}>
+    <li key={comment.commentTitle}>
       <Comment {...comment} />
     </li>
   ));

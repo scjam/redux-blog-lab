@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createPost } from '../../actions/postActions';
 
-const CommentForm = () => {
+const CommentForm = ({ index }) => {
   const dispatch = useDispatch();
 
   const [commentTitle, setCommentTitle] = useState('');
@@ -11,7 +12,7 @@ const CommentForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    dispatch(createPost({ commentTitle, commentContent }));
+    dispatch(createPost({ commentTitle, commentContent, index }));
   };
 
   return (
